@@ -1,8 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="1117.0" style="-fx-background-color: red; -fx-border-color: black; -fx-border-width: 9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ControladoraDonantes">
+   <children>
+      <TableView layoutX="9.0" layoutY="340.0" prefHeight="200.0" prefWidth="1098.0" style="-fx-border-color: white; -fx-border-width: 6; -fx-background-color: black;">
+        <columns>
+          <TableColumn prefWidth="37.0" text="ID" />
+          <TableColumn prefWidth="52.0" text="Nombre" />
+            <TableColumn prefWidth="64.0" text="Apellido 1" />
+            <TableColumn prefWidth="62.0" text="Apellido 2" />
+            <TableColumn prefWidth="90.0" text="DNI/Pasaporte" />
+            <TableColumn prefWidth="32.0" text="Sexo" />
+            <TableColumn prefWidth="40.0" text="E mail" />
+            <TableColumn prefWidth="33.0" text="Ciclo" />
+            <TableColumn prefWidth="85.0" text="Apto/No apto" />
+            <TableColumn prefWidth="21.0" text="CP" />
+            <TableColumn text="F.Nacimiento" />
+            <TableColumn prefWidth="48.0" text="País" />
+            <TableColumn prefWidth="52.0" text="TLF." />
+            <TableColumn prefWidth="64.0" text="TLF. Móvil" />
+            <TableColumn prefWidth="58.0" text="Dirección" />
+            <TableColumn prefWidth="57.0" text="Provincia" />
+            <TableColumn prefWidth="76.0" text="T.Residencia" />
+            <TableColumn prefWidth="61.0" text="Población" />
+            <TableColumn prefWidth="72.0" text="Tipo Sangre" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="33.0" layoutX="254.0" layoutY="281.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="84.0" layoutX="55.0" layoutY="48.0" stroke="BLACK" strokeType="INSIDE" width="181.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="84.0" layoutX="905.0" layoutY="226.0" stroke="BLACK" strokeType="INSIDE" width="181.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="84.0" layoutX="897.0" layoutY="48.0" stroke="BLACK" strokeType="INSIDE" width="181.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="84.0" layoutX="476.0" layoutY="48.0" stroke="BLACK" strokeType="INSIDE" width="181.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="84.0" layoutX="47.0" layoutY="226.0" stroke="BLACK" strokeType="INSIDE" width="181.0" />
+      <Button layoutX="47.0" layoutY="40.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="181.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4;" text="Nuevo Donante" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="39.0" layoutY="218.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="181.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4;" text="Buscar por DNI" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="468.0" layoutY="40.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="181.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4;" text="Modificar Donante" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="889.0" layoutY="40.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="181.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4;" text="Borrar Donante" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="897.0" layoutY="218.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="181.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4;" text="Generar Carnet" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Button>
+      <TextField layoutX="249.0" layoutY="275.0" prefHeight="20.0" prefWidth="199.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4;" />
+   </children>
 </AnchorPane>
-
