@@ -6,25 +6,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class ControladoraDonantes {
+public class ControladoraFormulario {
 
 	@FXML
-	private TextField buscar;
-	
-	@FXML
-	private Button añadir;
-	
-	@FXML
-    private Button eliminar;
-    
-    @FXML
-    private Button modificar;
-    
-    @FXML
-    private Button carnet;
-    
-    @FXML
-    private Button busqueda;
+	private Button buttonclose;
 
 	private Stage ventana;
 	private Main ProgramaPrincipal;
@@ -42,13 +27,13 @@ public class ControladoraDonantes {
 	
 	
 	
-	public void abrirFormulario() {
-		this.ProgramaPrincipal.mostrarFormulario();
+	
+	public void abrirAD() {
+		this.ProgramaPrincipal.mostrarAnadirDonante();
+		this.ventana.close();
 	}
 
-	public void abrirModDonante() {
-		this.ProgramaPrincipal.mostrarModificarDonante();
-	}
+	
 
 
 

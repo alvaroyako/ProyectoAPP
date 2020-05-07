@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: red; -fx-border-color: black; -fx-border-width: 9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ControladoraModificarDonante">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: red; -fx-border-color: black; -fx-border-width: 9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ControladoraAnadirDonante">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="46.0" layoutX="28.0" layoutY="340.0" stroke="BLACK" strokeType="INSIDE" width="101.0" />
       <Button layoutX="20.0" layoutY="333.0" mnemonicParsing="false" style="-fx-background-color: BLACK; -fx-border-color: WHITE; -fx-border-width: 4;" text="BORRAR" textFill="WHITE">

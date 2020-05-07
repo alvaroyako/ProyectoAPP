@@ -39,7 +39,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="84.0" layoutX="897.0" layoutY="48.0" stroke="BLACK" strokeType="INSIDE" width="181.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="84.0" layoutX="476.0" layoutY="48.0" stroke="BLACK" strokeType="INSIDE" width="181.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="84.0" layoutX="47.0" layoutY="226.0" stroke="BLACK" strokeType="INSIDE" width="181.0" />
-      <Button layoutX="47.0" layoutY="40.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="181.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4;" text="Nuevo Donante" textFill="WHITE">
+      <Button fx:id="formulario" layoutX="47.0" layoutY="40.0" mnemonicParsing="false" onAction="#abrirFormulario" prefHeight="84.0" prefWidth="181.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4;" text="Nuevo Donante" textFill="WHITE">
          <font>
             <Font name="Impact" size="20.0" />
          </font>
@@ -49,7 +49,7 @@
             <Font name="Impact" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="468.0" layoutY="40.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="181.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4;" text="Modificar Donante" textFill="WHITE">
+      <Button fx:id="modificar" layoutX="468.0" layoutY="40.0" mnemonicParsing="false" onAction="#abrirModDonante" prefHeight="84.0" prefWidth="181.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4;" text="Modificar Donante" textFill="WHITE">
          <font>
             <Font name="Impact" size="19.0" />
          </font>

@@ -16,9 +16,7 @@ public class ControladoraEstadisticas {
 		this.ventana4 = ventana4;
 	}
 
-	public void closeWindow(){
-		this.ventana4.close();
-	}
+	
 
 
 

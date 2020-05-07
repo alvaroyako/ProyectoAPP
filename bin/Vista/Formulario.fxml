@@ -1,8 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="839.0" style="-fx-background-color: RED; -fx-border-color: black; -fx-border-width: 9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ControladoraFormulario">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="89.0" layoutX="503.0" layoutY="491.0" stroke="BLACK" strokeType="INSIDE" width="210.0" />
+      <Button fx:id="buttonclose" layoutX="495.0" layoutY="483.0" mnemonicParsing="false" onAction="#abrirAD" prefHeight="89.0" prefWidth="210.0" style="-fx-background-color: BLACK; -fx-border-color: WHITE; -fx-border-width: 4;" text="SIGUIENTE" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font></Button>
+      <Label layoutX="361.0" layoutY="22.0" prefHeight="22.0" prefWidth="20.0" text="SÍ" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="56.0" text="¿Su edad está comprendida entre los 18 y 65 años?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="361.0" layoutY="55.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="55.0" mnemonicParsing="false" />
+      <Label layoutX="398.0" layoutY="22.0" prefHeight="22.0" prefWidth="20.0" text="NO" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="83.0" text="¿Se encuentra bien hoy?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="361.0" layoutY="83.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="83.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <Label layoutX="14.0" layoutY="109.0" text="¿Pesa +5okg?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="400.0" layoutY="111.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="111.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <Label layoutX="14.0" layoutY="136.0" text="¿Es la primera vez que dona?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="361.0" layoutY="136.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="136.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <Label layoutX="14.0" layoutY="164.0" text="¿Ha donado en los últimos 12 meses?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="192.0" text="¿Has sido rechazado como donante alguna vez?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="219.0" text="¿Convive o ha convivido con un enfermo de SIDA o hepatitis?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="245.0" text="¿Has compartido cepillo de dientes,etc. con algún conocido ultimamente?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="267.0" text="¿Se ha vacunado en el último mes o inmunoglobulinas en los últimos 12 meses?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="290.0" text="¿Le han puesto la vacuna de la rabia en el último año?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="316.0" text="¿Se ha realizado algún tratamiento dental en los últimos 7 días?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="339.0" text="¿Ha tomado alguna medicación en los últimos 5 días?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="366.0" text="¿Ha tomado PROSCAR,PROPECIA,ROACUTAN,ISOTREX,TIGASON,etc..?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="392.0" text="¿Ha tenido alguna infección en los últimos 15 días?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="417.0" text="¿Ha sido hospitalizado/operado/endoscopia en  los últimos 4 meses?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="442.0" text="¿Alguna salpicadura con sangre o punción con aguja en los últimos 4 meses?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="465.0" text="¿Tatuaje/piercing/acupuntura en los últimos 4 meses?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="489.0" text="¿Embarazada en los últimos 6 meses?¿Sigue amamantando?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="512.0" text="¿Algún episodio alérgico importante en el último año?¿Sufre asma?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="534.0" text="¿Ha padecido alguna enfermedad infecciosa grave?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="556.0" text="¿Ha tenido alguna enfermedad grave de algún organo?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="578.0" text="¿Ha tenido convulsiones no febriles/Desmayos/Epilepsia?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="361.0" layoutY="241.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="216.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <Label layoutX="14.0" layoutY="600.0" text="¿Le han transfundido sangre en alguna ocasión?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="622.0" text="¿Ha utilizado anabolizantes alguna vez?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="644.0" text="¿Ha sido tratado con hormonas de crecimiento?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="665.0" text="¿Ha residido en UK más de un año entre  1980 y 1986?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="56.0" text="¿Ha nacido Vd., su madre o su abuela materna fuera de la UE?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="84.0" text="¿Ha viajado fuera de la UE en los últimos 6 meses?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="109.0" text="¿Ha residido alguna vez 6 meses o más fuera de la UE?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="431.0" layoutY="137.0" text="¿Va a realizar alguna actividad de riesgo pasadas 12h tras la donación?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="429.0" layoutY="165.0" text="¿Le han hecho alguna prueba/reconocimiento médico en el último año?" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="11.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="361.0" layoutY="164.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="290.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="190.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="265.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="265.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="241.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="793.0" layoutY="55.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="163.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="758.0" layoutY="55.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="758.0" layoutY="109.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="216.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="291.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="758.0" layoutY="84.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="758.0" layoutY="136.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="190.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <Label layoutX="758.0" layoutY="22.0" prefHeight="22.0" prefWidth="20.0" text="SÍ" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="793.0" layoutY="22.0" prefHeight="22.0" prefWidth="20.0" text="NO" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="758.0" layoutY="164.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="793.0" layoutY="163.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="793.0" layoutY="137.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="793.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="793.0" layoutY="84.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="416.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="339.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="367.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="578.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="511.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="489.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="534.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="392.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="465.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="556.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="416.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="392.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="367.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="339.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="665.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="644.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="622.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="361.0" layoutY="600.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="465.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="489.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="556.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="578.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="644.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="511.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="534.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="665.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="622.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton layoutX="400.0" layoutY="600.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+   </children>
 </AnchorPane>
-
