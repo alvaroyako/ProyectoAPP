@@ -1,15 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: red; -fx-border-color: black; -fx-border-width: 9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ControladoraEstadisticas">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="227.0" prefWidth="585.0" style="-fx-background-color: F694AC; -fx-border-color: black; -fx-border-width: 9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ControladoraEstadisticas">
    <children>
-      <Label layoutX="24.0" layoutY="30.0" text="Número total de donantes" textFill="WHITE">
+      <Label layoutX="24.0" layoutY="30.0" text="Número total de donantes">
          <font>
             <Font name="Impact" size="20.0" />
          </font>
       </Label>
+      <Label layoutX="24.0" layoutY="54.0" text="Número total de donantes masculinos">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="78.0" text="Número total de donantes femeninos">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="102.0" text="Número total de donantes femeninos">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="126.0" text="Número total de donantes que viven en Valdemoro">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="150.0" text="Número total de donantes aptos">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="174.0" text="Número total de donantes españoles">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="483.0" layoutY="30.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="consulta2" layoutX="483.0" layoutY="54.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="consulta3" layoutX="483.0" layoutY="78.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="consulta4" layoutX="483.0" layoutY="102.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="consulta5" layoutX="483.0" layoutY="126.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="consulta6" layoutX="483.0" layoutY="150.0" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="consulta7" layoutX="483.0" layoutY="174.0" prefHeight="25.0" prefWidth="43.0" />
    </children>
 </AnchorPane>

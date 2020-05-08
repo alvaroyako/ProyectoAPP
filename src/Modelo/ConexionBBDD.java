@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
 public class ConexionBBDD {
@@ -58,5 +61,25 @@ public class ConexionBBDD {
 			System.out.println("ERROR en conexión con ORACLE");
 			e.printStackTrace();
 		}
+	}
+	
+	public String consultas1() throws SQLException{
+		Statement stm = conexion.createStatement();
+		String selectsql = "SELECT COUNT (NUM_DONANTE) FROM " + usr +".DONANTES";
+		
+		try{
+			ResultSet resultado = stm.executeQuery(selectsql);
+			
+
+		}catch(SQLException sqle){
+
+			int pos = sqle.getMessage().indexOf(":");
+			String codeErrorSQL = sqle.getMessage().substring(0,pos);
+
+			System.out.println(codeErrorSQL);
+		}
+		ResultSet resultado = stm.executeQuery(selectsql);
+		String con1 = resultado.getString(1);
+		return con1;
 	}
 }
