@@ -25,13 +25,12 @@ public class ControladoraFormulario {
 		this.ProgramaPrincipal=ProgramaPrincipal;
 	}
 	
-	
-	
-	
-	public void abrirAD() {
-		this.ProgramaPrincipal.mostrarAnadirDonante();
-		this.ventana.close();
+	public void abrirAnadirDonacion() {
+		this.ProgramaPrincipal.mostrarAnadirDonacion();
 	}
+	
+	
+	
 
 	
 

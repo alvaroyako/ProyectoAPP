@@ -32,11 +32,15 @@ public class ControladoraDonaciones {
 	
 	public void setProgramaPrincipal(Main ProgramaPrincipal) {
 		this.ProgramaPrincipal=ProgramaPrincipal;
+		
+		
 	}
 	
-	public void abrirAnadirDonacion() {
-		this.ProgramaPrincipal.mostrarAnadirDonacion();
+	public void abrirFormulario() {
+		this.ProgramaPrincipal.mostrarFormulario();
 	}
+	
+	
 	
 	public void abrirModDonacion() {
 		this.ProgramaPrincipal.mostrarModDonacion();

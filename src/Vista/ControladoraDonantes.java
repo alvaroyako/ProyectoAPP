@@ -1,5 +1,8 @@
 package Vista;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import Controlador.Main;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -42,8 +45,8 @@ public class ControladoraDonantes {
 	
 	
 	
-	public void abrirFormulario() {
-		this.ProgramaPrincipal.mostrarFormulario();
+	public void abrirAD() {
+		this.ProgramaPrincipal.mostrarAnadirDonante();
 	}
 
 	public void abrirModDonante() {
