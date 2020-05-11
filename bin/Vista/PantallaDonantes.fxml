@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="1087.0" style="-fx-background-color: #6FD7DE;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ControladoraDonantes">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="1087.0" style="-fx-background-color: #6FD7DE; -fx-border-color: black; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ControladoraDonantes">
    <children>
       <TableView layoutX="3.0" layoutY="215.0" prefHeight="200.0" prefWidth="1081.0">
         <columns>
@@ -31,11 +31,11 @@
             <TableColumn prefWidth="79.0" text="Tipo Sangre" />
         </columns>
       </TableView>
-      <Button fx:id="adir" layoutX="124.0" layoutY="65.0" mnemonicParsing="false" onAction="#abrirAD" prefHeight="68.0" prefWidth="112.0" text="Añadir Donante" />
+      <Button fx:id="add" layoutX="124.0" layoutY="65.0" mnemonicParsing="false" onAction="#abrirAD" prefHeight="68.0" prefWidth="112.0" text="Añadir Donante" />
       <Button fx:id="modificar" layoutX="306.0" layoutY="65.0" mnemonicParsing="false" onAction="#abrirModDonante" prefHeight="68.0" prefWidth="112.0" text="Editar Donante" />
       <Button fx:id="eliminar" layoutX="488.0" layoutY="65.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="112.0" text="Borrar Donante" />
-      <Button fx:id="buscar" layoutX="670.0" layoutY="65.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="112.0" text="Buscar por DNI" />
+      <Button fx:id="busqueda" layoutX="670.0" layoutY="65.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="112.0" text="Buscar por DNI" />
       <Button fx:id="carnet" layoutX="852.0" layoutY="65.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="112.0" text="Generar Carnet" />
-      <TextField fx:id="busqueda" layoutX="652.0" layoutY="155.0" />
+      <TextField fx:id="buscar" layoutX="652.0" layoutY="155.0" />
    </children>
 </AnchorPane>

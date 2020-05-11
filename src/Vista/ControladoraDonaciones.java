@@ -10,7 +10,7 @@ public class ControladoraDonaciones {
 
 	
 	@FXML
-	private Button añadir;
+	private Button add;
 	
 	@FXML
     private Button eliminar;
@@ -19,7 +19,10 @@ public class ControladoraDonaciones {
     private Button modificar;
     
     @FXML
-	private Button busqueda;
+	private Button buscar;
+    
+    @FXML
+    private TextField busqueda;
 
 	private Stage ventana3;
 
@@ -46,7 +49,9 @@ public class ControladoraDonaciones {
 		this.ProgramaPrincipal.mostrarModDonacion();
 	}
 
-	
+	public void closeWindow() {
+		this.ventana3.close();
+	}
 
 
 

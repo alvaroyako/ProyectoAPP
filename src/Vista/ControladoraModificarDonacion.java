@@ -16,7 +16,7 @@ public class ControladoraModificarDonacion {
 		this.ventana = ventana;
 	}
 	
-	public void cerrar() {
+	public void ModDonacion() {
 		this.ventana.close();
 	}
 }

@@ -1,16 +1,13 @@
 package Vista;
 
-import java.sql.SQLException;
 
-import Modelo.ConexionBBDD;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ControladoraEstadisticas {
-	
-	ConexionBBDD con =new ConexionBBDD();
+
 	
 	@FXML
 	private Button botonmosrar;
@@ -45,15 +42,9 @@ public class ControladoraEstadisticas {
 	}
 	
 	
-	@FXML
-	   public void initialize() throws SQLException {
-
-	       // TODO (don't really need to do anything here).
-		ConexionBBDD con =new ConexionBBDD();
-		String datos=con.consultas1();
-		consulta1.setText(datos);
-
-	   }
+	public void closeWindow() {
+		this.ventana4.close();
+	}
 		
 	
 	

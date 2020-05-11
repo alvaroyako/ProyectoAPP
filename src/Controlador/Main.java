@@ -51,6 +51,7 @@ public class Main extends Application {
             controller.setProgramaPrincipal(this);
 
             stagePrincipal.show();
+            
         } catch (IOException e) {
             //tratar la excepción.
         }
@@ -77,6 +78,7 @@ public class Main extends Application {
             controller2.setProgramaPrincipal(this);
 
             ventana.show();
+           
 
         } catch (Exception e) {
             //tratar la excepción

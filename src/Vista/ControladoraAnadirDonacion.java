@@ -19,7 +19,7 @@ public class ControladoraAnadirDonacion {
 	
 	
 	
-	public void cerrar() {
+	public void addDonacion() {
 		this.ventana.close();
 	}
 }

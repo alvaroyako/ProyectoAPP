@@ -3,22 +3,22 @@ package Vista;
 import Controlador.Main;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ControladoraFormulario {
 
 	@FXML
 	private Button buttonclose;
+	
 
-	private Stage ventana;
+	private Stage ventanaF;
 	private Main ProgramaPrincipal;
 	
 	
 
-	public void setStagePrincipal(Stage ventana) {
+	public void setStagePrincipal(Stage ventanaF) {
 		// TODO Auto-generated method stub
-		this.ventana = ventana;
+		this.ventanaF = ventanaF;
 	}
 	
 	public void setProgramaPrincipal(Main ProgramaPrincipal) {
@@ -27,10 +27,13 @@ public class ControladoraFormulario {
 	
 	public void abrirAnadirDonacion() {
 		this.ProgramaPrincipal.mostrarAnadirDonacion();
+		this.ventanaF.close();
 	}
 	
 	
-	
+	public void closeWindow() {
+		this.ventanaF.close();
+	}
 
 	
 

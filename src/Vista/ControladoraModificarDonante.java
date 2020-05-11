@@ -19,7 +19,7 @@ public class ControladoraModificarDonante {
 	}
 	
 	
-	public void cerrar() {
+	public void ModDonante() {
 		this.ventana.close();
 	}
 

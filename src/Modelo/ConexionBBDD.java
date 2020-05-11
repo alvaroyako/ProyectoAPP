@@ -63,23 +63,5 @@ public class ConexionBBDD {
 		}
 	}
 	
-	public String consultas1() throws SQLException{
-		Statement stm = conexion.createStatement();
-		String selectsql = "SELECT COUNT (NUM_DONANTE) FROM " + usr +".DONANTES";
-		
-		try{
-			ResultSet resultado = stm.executeQuery(selectsql);
-			
-
-		}catch(SQLException sqle){
-
-			int pos = sqle.getMessage().indexOf(":");
-			String codeErrorSQL = sqle.getMessage().substring(0,pos);
-
-			System.out.println(codeErrorSQL);
-		}
-		ResultSet resultado = stm.executeQuery(selectsql);
-		String con1 = resultado.getString(1);
-		return con1;
-	}
+	
 }

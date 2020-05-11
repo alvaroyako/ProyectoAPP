@@ -1,7 +1,5 @@
 package Vista;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 
 import Controlador.Main;
 import javafx.fxml.FXML;
@@ -10,12 +8,15 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ControladoraDonantes {
+	
+	private Stage ventana;
+	private Main ProgramaPrincipal;
 
 	@FXML
 	private TextField buscar;
 	
 	@FXML
-	private Button añadir;
+	private Button add;
 	
 	@FXML
     private Button eliminar;
@@ -29,8 +30,7 @@ public class ControladoraDonantes {
     @FXML
     private Button busqueda;
 
-	private Stage ventana;
-	private Main ProgramaPrincipal;
+	
 	
 	
 
@@ -44,7 +44,7 @@ public class ControladoraDonantes {
 	}
 	
 	
-	
+
 	public void abrirAD() {
 		this.ProgramaPrincipal.mostrarAnadirDonante();
 	}
@@ -53,6 +53,8 @@ public class ControladoraDonantes {
 		this.ProgramaPrincipal.mostrarModificarDonante();
 	}
 
-
+	public void closeWindow() {
+		this.ventana.close();
+	}
 
 }
