@@ -8,33 +8,33 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="1087.0" style="-fx-background-color: #6FD7DE; -fx-border-color: black; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ControladoraDonantes">
    <children>
-      <TableView layoutX="3.0" layoutY="215.0" prefHeight="200.0" prefWidth="1081.0">
+      <TableView fx:id="tabla" layoutX="3.0" layoutY="215.0" prefHeight="200.0" prefWidth="1081.0">
         <columns>
-          <TableColumn prefWidth="37.0" text="ID" />
-          <TableColumn prefWidth="52.0" text="Nombre" />
-            <TableColumn prefWidth="64.0" text="Apellido 1" />
-            <TableColumn prefWidth="62.0" text="Apellido 2" />
-            <TableColumn prefWidth="90.0" text="DNI/Pasaporte" />
-            <TableColumn prefWidth="32.0" text="Sexo" />
-            <TableColumn prefWidth="40.0" text="E mail" />
-            <TableColumn prefWidth="33.0" text="Ciclo" />
-            <TableColumn prefWidth="85.0" text="Apto/No apto" />
-            <TableColumn prefWidth="21.0" text="CP" />
-            <TableColumn text="F.Nacimiento" />
-            <TableColumn prefWidth="48.0" text="País" />
-            <TableColumn prefWidth="48.0" text="TLF." />
-            <TableColumn prefWidth="63.0" text="TLF. Móvil" />
-            <TableColumn prefWidth="58.0" text="Dirección" />
-            <TableColumn prefWidth="57.0" text="Provincia" />
-            <TableColumn prefWidth="75.0" text="T.Residencia" />
-            <TableColumn prefWidth="60.0" text="Población" />
-            <TableColumn prefWidth="79.0" text="Tipo Sangre" />
+          <TableColumn fx:id="numero" prefWidth="26.0" text="ID" />
+          <TableColumn fx:id="nombre" prefWidth="56.0" text="Nombre" />
+            <TableColumn fx:id="apellido1" prefWidth="62.0" text="Apellido 1" />
+            <TableColumn fx:id="apellido2" prefWidth="62.0" text="Apellido 2" />
+            <TableColumn fx:id="DNI" prefWidth="89.0" text="DNI/Pasaporte" />
+            <TableColumn fx:id="col_sexo" prefWidth="32.0" text="Sexo" />
+            <TableColumn fx:id="col_email" prefWidth="43.0" text="E mail" />
+            <TableColumn fx:id="ciclo" prefWidth="32.0" text="Ciclo" />
+            <TableColumn fx:id="situacion" prefWidth="85.0" text="Apto/No apto" />
+            <TableColumn fx:id="cp" prefWidth="38.0" text="CP" />
+            <TableColumn fx:id="nacimiento" text="F.Nacimiento" />
+            <TableColumn fx:id="pais" prefWidth="39.0" text="País" />
+            <TableColumn fx:id="tlf" prefWidth="48.0" text="TLF." />
+            <TableColumn fx:id="tlfmovil" prefWidth="63.0" text="TLF. Móvil" />
+            <TableColumn fx:id="direccion" prefWidth="58.0" text="Dirección" />
+            <TableColumn fx:id="provincia" prefWidth="57.0" text="Provincia" />
+            <TableColumn fx:id="tipo_residencia" prefWidth="75.0" text="T.Residencia" />
+            <TableColumn fx:id="poblacion" prefWidth="60.0" text="Población" />
+            <TableColumn fx:id="sangre" prefWidth="79.0" text="Tipo Sangre" />
         </columns>
       </TableView>
       <Button fx:id="add" layoutX="124.0" layoutY="65.0" mnemonicParsing="false" onAction="#abrirAD" prefHeight="68.0" prefWidth="112.0" text="Añadir Donante" />
       <Button fx:id="modificar" layoutX="306.0" layoutY="65.0" mnemonicParsing="false" onAction="#abrirModDonante" prefHeight="68.0" prefWidth="112.0" text="Editar Donante" />
-      <Button fx:id="eliminar" layoutX="488.0" layoutY="65.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="112.0" text="Borrar Donante" />
-      <Button fx:id="busqueda" layoutX="670.0" layoutY="65.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="112.0" text="Buscar por DNI" />
+      <Button fx:id="eliminar" layoutX="488.0" layoutY="65.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="68.0" prefWidth="112.0" text="Borrar Donante" />
+      <Button fx:id="busqueda" layoutX="662.0" layoutY="65.0" mnemonicParsing="false" onAction="#Buscar" prefHeight="68.0" prefWidth="130.0" text="Buscar por apellido" />
       <Button fx:id="carnet" layoutX="852.0" layoutY="65.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="112.0" text="Generar Carnet" />
       <TextField fx:id="buscar" layoutX="652.0" layoutY="155.0" />
    </children>

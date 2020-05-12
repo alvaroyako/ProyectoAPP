@@ -3,39 +3,44 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6fd7de; -fx-border-color: black; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ControladoraAnadirDonante">
    <children>
-      <TextField alignment="CENTER" layoutX="226.0" layoutY="28.0" promptText="NUMERO DONANTE" />
-      <TextField alignment="CENTER" layoutX="77.0" layoutY="196.0" promptText="CP" />
-      <TextField alignment="CENTER" layoutX="77.0" layoutY="168.0" promptText="EMAIL" />
-      <TextField alignment="CENTER" layoutX="77.0" layoutY="140.0" promptText="DNI/PASAPORTE" />
-      <TextField alignment="CENTER" layoutX="77.0" layoutY="112.0" promptText="APELLIDO2" />
-      <TextField alignment="CENTER" layoutX="77.0" layoutY="84.0" promptText="APELLIDO1" />
-      <TextField alignment="CENTER" layoutX="77.0" layoutY="56.0" promptText="NOMBRE" />
-      <TextField alignment="CENTER" layoutX="77.0" layoutY="224.0" promptText="PAÍS NACIMIENTO" />
-      <TextField alignment="CENTER" layoutX="77.0" layoutY="252.0" promptText="TLF" />
-      <TextField alignment="CENTER" layoutX="77.0" layoutY="280.0" promptText="TLF MOVIL" />
-      <TextField alignment="CENTER" layoutX="375.0" layoutY="112.0" promptText="POBLACION" />
-      <TextField alignment="CENTER" layoutX="375.0" layoutY="84.0" promptText="PROVINCIA" />
-      <TextField alignment="CENTER" layoutX="375.0" layoutY="56.0" promptText="DIRECCION" />
-      <RadioButton layoutX="405.0" layoutY="143.0" mnemonicParsing="false" text="H">
+      <TextField fx:id="Numero" alignment="CENTER" layoutX="226.0" layoutY="28.0" promptText="NUMERO DONANTE" />
+      <TextField fx:id="CP" alignment="CENTER" layoutX="77.0" layoutY="196.0" promptText="CP" />
+      <TextField fx:id="Email" alignment="CENTER" layoutX="77.0" layoutY="168.0" promptText="EMAIL" />
+      <TextField fx:id="DNIoPasaporte" alignment="CENTER" layoutX="77.0" layoutY="140.0" promptText="DNI/PASAPORTE" />
+      <TextField fx:id="Apellido2" alignment="CENTER" layoutX="77.0" layoutY="112.0" promptText="APELLIDO2" />
+      <TextField fx:id="Apellido1" alignment="CENTER" layoutX="77.0" layoutY="84.0" promptText="APELLIDO1" />
+      <TextField fx:id="Nombre" alignment="CENTER" layoutX="77.0" layoutY="56.0" promptText="NOMBRE" />
+      <TextField fx:id="PaisNacimiento" alignment="CENTER" layoutX="77.0" layoutY="224.0" promptText="PAÍS NACIMIENTO" />
+      <TextField fx:id="TLF" alignment="CENTER" layoutX="77.0" layoutY="252.0" promptText="TLF" />
+      <TextField fx:id="TlfMovil" alignment="CENTER" layoutX="77.0" layoutY="280.0" promptText="TLF MOVIL" />
+      <TextField fx:id="Poblacion" alignment="CENTER" layoutX="375.0" layoutY="112.0" promptText="POBLACION" />
+      <TextField fx:id="Provincia" alignment="CENTER" layoutX="375.0" layoutY="84.0" promptText="PROVINCIA" />
+      <TextField fx:id="Direccion" alignment="CENTER" layoutX="375.0" layoutY="56.0" promptText="DIRECCION" />
+      <RadioButton fx:id="hombre" layoutX="405.0" layoutY="143.0" mnemonicParsing="false" selected="true" text="H">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="sexo" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="mujer" layoutX="466.0" layoutY="143.0" mnemonicParsing="false" text="M" toggleGroup="$sexo">
          <font>
             <Font name="Impact" size="12.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="466.0" layoutY="143.0" mnemonicParsing="false" text="M">
-         <font>
-            <Font name="Impact" size="12.0" />
-         </font>
-      </RadioButton>
-      <TextField alignment="CENTER" layoutX="368.0" layoutY="196.0" prefHeight="25.0" prefWidth="164.0" promptText="NACIMIENTO: DD/MM/YYYY" />
-      <TextField alignment="CENTER" layoutX="376.0" layoutY="224.0" promptText="TIPO RESIDENCIA" />
-      <TextField alignment="CENTER" layoutX="363.0" layoutY="252.0" prefHeight="25.0" prefWidth="175.0" promptText="SITUACIÓN COMO DONANTE" />
-      <TextField alignment="CENTER" layoutX="376.0" layoutY="168.0" promptText="CICLO" />
-      <Button layoutX="20.0" layoutY="333.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="101.0" text="Borrar" />
-      <Button fx:id="buttonclose" layoutX="481.0" layoutY="333.0" mnemonicParsing="false" onAction="#addDonante" prefHeight="46.0" prefWidth="101.0" text="Añadir" />
+      <TextField fx:id="Nacimiento" alignment="CENTER" layoutX="368.0" layoutY="196.0" prefHeight="25.0" prefWidth="164.0" promptText="NACIMIENTO: DD/MM/YYYY" />
+      <TextField fx:id="TipoResidencia" alignment="CENTER" layoutX="376.0" layoutY="224.0" promptText="TIPO RESIDENCIA" />
+      <TextField fx:id="SituacionDonante" alignment="CENTER" layoutX="363.0" layoutY="252.0" prefHeight="25.0" prefWidth="175.0" promptText="SITUACIÓN COMO DONANTE" />
+      <TextField fx:id="Ciclo" alignment="CENTER" layoutX="376.0" layoutY="168.0" promptText="CICLO" />
+      <Button fx:id="borrar" layoutX="20.0" layoutY="333.0" mnemonicParsing="false" onAction="#Borrar" prefHeight="46.0" prefWidth="101.0" text="Borrar" />
+      <Button fx:id="add" layoutX="481.0" layoutY="333.0" mnemonicParsing="false" onAction="#addDonante" prefHeight="46.0" prefWidth="101.0" text="Añadir" />
+      <TextField fx:id="Sangre" alignment="CENTER" layoutX="376.0" layoutY="280.0" promptText="TIPO SANGUÍNEO" />
    </children>
 </AnchorPane>
