@@ -220,9 +220,9 @@ public class ConexionBBDD {
 			pstmt = conexion.prepareStatement (selectsql);
 		}
 		else{
-			selectsql = "SELECT * FROM " + usr +".DONANTES WHERE APELLIDO1 LIKE ?%";
+			selectsql = "SELECT * FROM " + usr +".DONANTES WHERE APELLIDO1 LIKE ?";
 			pstmt = conexion.prepareStatement (selectsql);
-			pstmt.setString(1, apellido);
+			pstmt.setString(1, apellido+"%");
 		}
 
 
@@ -271,5 +271,63 @@ public class ConexionBBDD {
 		}
 
 		return listadonantes;
+	}
+	
+	public int ModificarDonante(int iD, String nombre, String apellido1, String apellido2, String dNIoPasaporte, char sexo,
+			String email, String ciclo, String situacion, int cP, String nacimiento, String paisNacimiento, int tLF,
+			int tLFMovil, String direccion, String provincia, String tResidencia, String poblacion, String sangre) throws SQLException{
+
+
+		// Preparo la sentencia SQL CrearTablaPersonas
+		String updatesql = "UPDATE " + usr + ".DONANTES SET NOMBRE= ?, APELLIDO1 =?, APELLIDO2 =?, DNI_O_PASAPORTE=?, SEXO = ?, EMAIL=?, CICLO=?, SITUACION_COMO_DONANTE=?, CP=?, FECHA_NACIMIENTO=?, PAIS_NACIMIENTO=?, TLF=?, TLF_MOVIL=?, DIRECCION=?, PROVINCIA=?, T_RESIDENCIA=?, POBLACION=?, TIPO_SANGUINEO=? WHERE NUM_DONANTE= ?";
+
+		PreparedStatement pstmt = conexion.prepareStatement (updatesql);
+		
+		pstmt.setString(1, nombre);
+		pstmt.setString(2, apellido1);
+		pstmt.setString(3, apellido2);
+		pstmt.setString(4, dNIoPasaporte);
+		pstmt.setString(5, Character.toString(sexo));
+		pstmt.setString(6, email);
+		pstmt.setString(7, ciclo);
+		pstmt.setString(8, situacion);
+		pstmt.setInt(9, cP);
+		pstmt.setString(10, nacimiento);
+		pstmt.setString(11, paisNacimiento);
+		pstmt.setInt(12, tLF);
+		pstmt.setInt(13, tLFMovil);
+		pstmt.setString(14, direccion);
+		pstmt.setString(15, provincia);
+		pstmt.setString(16, tResidencia);
+		pstmt.setString(17, poblacion);
+		pstmt.setString(18, sangre);
+		pstmt.setInt(19, iD);
+
+		//ejecuto la sentencia
+		try{
+			int resultado = pstmt.executeUpdate();
+
+			if(resultado != 1)
+				System.out.println("Error en la actualización " + resultado);
+			else
+				System.out.println("Persona actualizada con éxito!!!");
+
+			return 0;
+		}catch(SQLException sqle){
+
+			int pos = sqle.getMessage().indexOf(":");
+			String codeErrorSQL = sqle.getMessage().substring(0,pos);
+
+			if(codeErrorSQL.equals("ORA-00001") ){
+				System.out.println("Ya existe una persona con  ese ID o DNI/Pasaporte!!");
+				return 1;
+			}
+			else{
+				System.out.println("Ha habido algún problema con  Oracle al hacer la insercion");
+				return 2;
+			}
+
+		}
+
 	}
 }

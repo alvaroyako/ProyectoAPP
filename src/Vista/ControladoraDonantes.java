@@ -1,12 +1,16 @@
 package Vista;
 
 
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.Optional;
+
+import com.itextpdf.text.DocumentException;
 
 import Controlador.Main;
 import Modelo.ConexionBBDD;
 import Modelo.Donante;
+import Modelo.ImprimeArchivo;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -42,6 +46,9 @@ public class ControladoraDonantes {
     
     @FXML
     private Button busqueda;
+    
+    @FXML
+    private Button actualizar;
     
     @FXML
 	private TableView<Donante> tabla;
@@ -153,6 +160,32 @@ public class ControladoraDonantes {
 
 	}
 	
+	public void actualizar() throws SQLException {
+		ConexionBBDD con = new ConexionBBDD();
+		datos = con.ObtenerDonantes();
+
+		tabla.setItems(datos);
+
+		numero.setCellValueFactory(new PropertyValueFactory<Donante,Integer>("ID"));
+		nombre.setCellValueFactory(new PropertyValueFactory<Donante,String>("Nombre"));
+		apellido1.setCellValueFactory(new PropertyValueFactory<Donante,String>("Apellido1"));
+		apellido2.setCellValueFactory(new PropertyValueFactory<Donante,String>("Apellido2"));
+		DNI.setCellValueFactory(new PropertyValueFactory<Donante,String>("DNIoPasaporte"));
+		col_sexo.setCellValueFactory(new PropertyValueFactory<Donante,Character>("sexo"));
+		col_email.setCellValueFactory(new PropertyValueFactory<Donante,String>("email"));
+		ciclo.setCellValueFactory(new PropertyValueFactory<Donante,String>("Ciclo"));
+		situacion.setCellValueFactory(new PropertyValueFactory<Donante,String>("Situacion"));
+		cp.setCellValueFactory(new PropertyValueFactory<Donante,Integer>("CP"));
+		nacimiento.setCellValueFactory(new PropertyValueFactory<Donante,String>("Nacimiento"));
+		pais.setCellValueFactory(new PropertyValueFactory<Donante,String>("PaisNacimiento"));
+		tlf.setCellValueFactory(new PropertyValueFactory<Donante,Integer>("TLF"));
+		tlfmovil.setCellValueFactory(new PropertyValueFactory<Donante,Integer>("TLFMovil"));
+		direccion.setCellValueFactory(new PropertyValueFactory<Donante,String>("Direccion"));
+		provincia.setCellValueFactory(new PropertyValueFactory<Donante,String>("Provincia"));
+		tipo_residencia.setCellValueFactory(new PropertyValueFactory<Donante,String>("TResidencia"));
+		poblacion.setCellValueFactory(new PropertyValueFactory<Donante,String>("Poblacion"));
+		sangre.setCellValueFactory(new PropertyValueFactory<Donante,String>("Sangre"));
+	}
 	public void Eliminar() throws SQLException{
 		int index = tabla.getSelectionModel().getSelectedIndex();
 		if( index >= 0){
@@ -217,10 +250,43 @@ public class ControladoraDonantes {
 		datos = con.BuscarPersonas(buscarapellido);
 
 		tabla.setItems(datos);
+	}
+	
+	public void imprime() throws FileNotFoundException, DocumentException, SQLException{
+		int index = tabla.getSelectionModel().getSelectedIndex();
+		if( index >= 0){
 
+			Donante seleccionada = tabla.getSelectionModel().getSelectedItem();
 
+			// Se abre un dialog box de confirmacion de eliminar
+			Alert alert = new Alert(AlertType.CONFIRMATION);
+			alert.setTitle("Confirmación!!!");
+			alert.setHeaderText("Por favor confirme la generacion del carnet");
+			alert.setContentText("Desea crear el carnet del usuario "+ seleccionada.getNombre() + " " +seleccionada.getApellido1() +" ?");
+
+			Optional<ButtonType> result = alert.showAndWait();
+			if (result.get() == ButtonType.OK){
+			    // ... user chose OK
+				
+				ImprimeArchivo imprime = new ImprimeArchivo(seleccionada.getNombre(),"C:\\Users\\alvret\\Desktop\\");
+				imprime.generarArchivoPDF(seleccionada.getID(),seleccionada.getNombre(),seleccionada.getApellido1(),seleccionada.getApellido2(),seleccionada.getSangre());
+			}
+
+		}else{
+
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Error");
+			alert.setHeaderText("Error en selección de datos");
+			alert.setContentText("NO HAY NINGUN ELEMENTO SELECCIONADO!");
+			alert.showAndWait();
+
+		}
 	}
 
+		
+
+	
+	
 	public void abrirAD() {
 		this.ProgramaPrincipal.mostrarAnadirDonante();
 	}
@@ -229,8 +295,5 @@ public class ControladoraDonantes {
 		this.ProgramaPrincipal.mostrarModificarDonante();
 	}
 
-	public void closeWindow() {
-		this.ventana.close();
-	}
 
 }

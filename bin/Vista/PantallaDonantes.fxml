@@ -10,32 +10,33 @@
    <children>
       <TableView fx:id="tabla" layoutX="3.0" layoutY="215.0" prefHeight="200.0" prefWidth="1081.0">
         <columns>
-          <TableColumn fx:id="numero" prefWidth="26.0" text="ID" />
-          <TableColumn fx:id="nombre" prefWidth="56.0" text="Nombre" />
-            <TableColumn fx:id="apellido1" prefWidth="62.0" text="Apellido 1" />
-            <TableColumn fx:id="apellido2" prefWidth="62.0" text="Apellido 2" />
-            <TableColumn fx:id="DNI" prefWidth="89.0" text="DNI/Pasaporte" />
-            <TableColumn fx:id="col_sexo" prefWidth="32.0" text="Sexo" />
-            <TableColumn fx:id="col_email" prefWidth="43.0" text="E mail" />
-            <TableColumn fx:id="ciclo" prefWidth="32.0" text="Ciclo" />
-            <TableColumn fx:id="situacion" prefWidth="85.0" text="Apto/No apto" />
-            <TableColumn fx:id="cp" prefWidth="38.0" text="CP" />
-            <TableColumn fx:id="nacimiento" text="F.Nacimiento" />
-            <TableColumn fx:id="pais" prefWidth="39.0" text="País" />
-            <TableColumn fx:id="tlf" prefWidth="48.0" text="TLF." />
-            <TableColumn fx:id="tlfmovil" prefWidth="63.0" text="TLF. Móvil" />
-            <TableColumn fx:id="direccion" prefWidth="58.0" text="Dirección" />
-            <TableColumn fx:id="provincia" prefWidth="57.0" text="Provincia" />
-            <TableColumn fx:id="tipo_residencia" prefWidth="75.0" text="T.Residencia" />
-            <TableColumn fx:id="poblacion" prefWidth="60.0" text="Población" />
-            <TableColumn fx:id="sangre" prefWidth="79.0" text="Tipo Sangre" />
+          <TableColumn fx:id="numero" prefWidth="100.0" text="ID" />
+          <TableColumn fx:id="nombre" prefWidth="100.0" text="Nombre" />
+            <TableColumn fx:id="apellido1" prefWidth="100.0" text="Apellido 1" />
+            <TableColumn fx:id="apellido2" prefWidth="100.0" text="Apellido 2" />
+            <TableColumn fx:id="DNI" prefWidth="100.0" text="DNI/Pasaporte" />
+            <TableColumn fx:id="col_sexo" minWidth="4.0" prefWidth="100.0" text="Sexo" />
+            <TableColumn fx:id="col_email" prefWidth="100.0" text="E mail" />
+            <TableColumn fx:id="ciclo" prefWidth="100.0" text="Ciclo" />
+            <TableColumn fx:id="situacion" prefWidth="100.0" text="Apto/No apto" />
+            <TableColumn fx:id="cp" prefWidth="100.0" text="CP" />
+            <TableColumn fx:id="nacimiento" prefWidth="100.0" text="F.Nacimiento" />
+            <TableColumn fx:id="pais" prefWidth="100.0" text="País" />
+            <TableColumn fx:id="tlf" prefWidth="100.0" text="TLF." />
+            <TableColumn fx:id="tlfmovil" prefWidth="100.0" text="TLF. Móvil" />
+            <TableColumn fx:id="direccion" prefWidth="100.0" text="Dirección" />
+            <TableColumn fx:id="provincia" prefWidth="100.0" text="Provincia" />
+            <TableColumn fx:id="tipo_residencia" prefWidth="100.0" text="T.Residencia" />
+            <TableColumn fx:id="poblacion" prefWidth="100.0" text="Población" />
+            <TableColumn fx:id="sangre" prefWidth="100.0" text="Tipo Sangre" />
         </columns>
       </TableView>
       <Button fx:id="add" layoutX="124.0" layoutY="65.0" mnemonicParsing="false" onAction="#abrirAD" prefHeight="68.0" prefWidth="112.0" text="Añadir Donante" />
       <Button fx:id="modificar" layoutX="306.0" layoutY="65.0" mnemonicParsing="false" onAction="#abrirModDonante" prefHeight="68.0" prefWidth="112.0" text="Editar Donante" />
       <Button fx:id="eliminar" layoutX="488.0" layoutY="65.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="68.0" prefWidth="112.0" text="Borrar Donante" />
       <Button fx:id="busqueda" layoutX="662.0" layoutY="65.0" mnemonicParsing="false" onAction="#Buscar" prefHeight="68.0" prefWidth="130.0" text="Buscar por apellido" />
-      <Button fx:id="carnet" layoutX="852.0" layoutY="65.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="112.0" text="Generar Carnet" />
+      <Button fx:id="carnet" layoutX="852.0" layoutY="65.0" mnemonicParsing="false" onAction="#imprime" prefHeight="68.0" prefWidth="112.0" text="Generar Carnet" />
       <TextField fx:id="buscar" layoutX="652.0" layoutY="155.0" />
+      <Button fx:id="actualizar" layoutX="973.0" layoutY="14.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="41.0" prefWidth="100.0" text="Actualizar Tabla" />
    </children>
 </AnchorPane>
