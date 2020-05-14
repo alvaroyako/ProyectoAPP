@@ -3,6 +3,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -17,8 +21,11 @@
             <Font name="Impact" size="12.0" />
          </font>
       </Label>
-      <RadioButton layoutX="361.0" layoutY="55.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="55.0" mnemonicParsing="false" />
+      <RadioButton fx:id="p1si" layoutX="361.0" layoutY="55.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p1" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p1no" layoutX="400.0" layoutY="55.0" mnemonicParsing="false" toggleGroup="$p1" />
       <Label layoutX="398.0" layoutY="22.0" prefHeight="22.0" prefWidth="20.0" text="NO">
          <font>
             <Font name="Impact" size="18.0" />
@@ -29,22 +36,31 @@
             <Font name="Impact" size="12.0" />
          </font>
       </Label>
-      <RadioButton layoutX="361.0" layoutY="83.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="83.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton fx:id="p2si" layoutX="361.0" layoutY="83.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p2" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p2no" layoutX="400.0" layoutY="83.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p2" />
       <Label layoutX="14.0" layoutY="109.0" text="¿Pesa +5okg?">
          <font>
             <Font name="Impact" size="12.0" />
          </font>
       </Label>
-      <RadioButton layoutX="400.0" layoutY="111.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="111.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton fx:id="p3no" layoutX="400.0" layoutY="111.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p3" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p3si" layoutX="361.0" layoutY="111.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE" toggleGroup="$p3" />
       <Label layoutX="14.0" layoutY="136.0" text="¿Es la primera vez que dona?">
          <font>
             <Font name="Impact" size="12.0" />
          </font>
       </Label>
-      <RadioButton layoutX="361.0" layoutY="136.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="136.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton fx:id="p4si" layoutX="361.0" layoutY="136.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p4" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p4no" layoutX="400.0" layoutY="136.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p4" />
       <Label layoutX="14.0" layoutY="164.0" text="¿Ha donado en los últimos 12 meses?">
          <font>
             <Font name="Impact" size="12.0" />
@@ -135,8 +151,14 @@
             <Font name="Impact" size="12.0" />
          </font>
       </Label>
-      <RadioButton layoutX="361.0" layoutY="241.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="216.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton fx:id="p8si" layoutX="361.0" layoutY="241.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p8" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p7si" layoutX="361.0" layoutY="216.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p7" />
+         </toggleGroup></RadioButton>
       <Label layoutX="14.0" layoutY="600.0" text="¿Le han transfundido sangre en alguna ocasión?">
          <font>
             <Font name="Impact" size="12.0" />
@@ -182,23 +204,50 @@
             <Font name="Impact" size="11.0" />
          </font>
       </Label>
-      <RadioButton layoutX="361.0" layoutY="164.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="290.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="190.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="265.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="265.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="241.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="793.0" layoutY="55.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="163.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="758.0" layoutY="55.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="758.0" layoutY="109.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="216.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="291.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="758.0" layoutY="84.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="758.0" layoutY="136.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="190.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
+      <RadioButton fx:id="p5si" layoutX="361.0" layoutY="164.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p5" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p11no" layoutX="400.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p11" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p10si" layoutX="361.0" layoutY="290.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p10" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p6si" layoutX="361.0" layoutY="190.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p6" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p9si" layoutX="361.0" layoutY="265.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p9" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p9no" layoutX="400.0" layoutY="265.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p9" />
+      <RadioButton fx:id="p8no" layoutX="400.0" layoutY="241.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p8" />
+      <RadioButton fx:id="p27no" layoutX="793.0" layoutY="55.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p27" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p5no" layoutX="400.0" layoutY="163.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p5" />
+      <RadioButton fx:id="p11si" layoutX="361.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE" toggleGroup="$p11" />
+      <RadioButton fx:id="p27si" layoutX="758.0" layoutY="55.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE" toggleGroup="$p27" />
+      <RadioButton fx:id="p29si" layoutX="758.0" layoutY="109.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p29" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p7no" layoutX="400.0" layoutY="216.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p7" />
+      <RadioButton fx:id="p10no" layoutX="400.0" layoutY="291.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p10" />
+      <RadioButton fx:id="p28si" layoutX="758.0" layoutY="84.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p28" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p30si" layoutX="758.0" layoutY="136.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p30" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p6no" layoutX="400.0" layoutY="190.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p6" />
       <Label layoutX="758.0" layoutY="22.0" prefHeight="22.0" prefWidth="20.0" text="SÍ">
          <font>
             <Font name="Impact" size="18.0" />
@@ -209,41 +258,99 @@
             <Font name="Impact" size="18.0" />
          </font>
       </Label>
-      <RadioButton layoutX="758.0" layoutY="164.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="793.0" layoutY="163.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="793.0" layoutY="137.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="793.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="793.0" layoutY="84.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="416.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="339.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="367.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="578.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="511.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="489.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="534.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="392.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="465.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="556.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="416.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="392.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="367.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="339.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="665.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="644.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="622.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="361.0" layoutY="600.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="465.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="489.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="556.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="578.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="644.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="511.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="534.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="665.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="622.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <RadioButton layoutX="400.0" layoutY="600.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" />
-      <Button fx:id="buttonclose" layoutX="544.0" layoutY="484.0" mnemonicParsing="false" onAction="#abrirAnadirDonacion" prefHeight="89.0" prefWidth="210.0" text="Siguiente" />
+      <RadioButton fx:id="p31si" layoutX="758.0" layoutY="164.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p31" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p31no" layoutX="793.0" layoutY="163.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p31" />
+      <RadioButton fx:id="p30no" layoutX="793.0" layoutY="137.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p30" />
+      <RadioButton fx:id="p29no" layoutX="793.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p29" />
+      <RadioButton fx:id="p28no" layoutX="793.0" layoutY="84.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p28" />
+      <RadioButton fx:id="p15si" layoutX="361.0" layoutY="416.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p15" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p12si" layoutX="361.0" layoutY="339.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p12" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p13si" layoutX="361.0" layoutY="367.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p13" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p22si" layoutX="361.0" layoutY="578.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p22" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p19si" layoutX="361.0" layoutY="511.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p19" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p18si" layoutX="361.0" layoutY="489.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p18" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p20si" layoutX="361.0" layoutY="534.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p20" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p14si" layoutX="361.0" layoutY="392.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p14" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p17si" layoutX="361.0" layoutY="465.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p17" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p16si" layoutX="361.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p16" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p21si" layoutX="361.0" layoutY="556.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p21" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p15no" layoutX="400.0" layoutY="416.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p15" />
+      <RadioButton fx:id="p14no" layoutX="400.0" layoutY="392.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p14" />
+      <RadioButton fx:id="p13no" layoutX="400.0" layoutY="367.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p13" />
+      <RadioButton fx:id="p12no" layoutX="400.0" layoutY="339.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p12" />
+      <RadioButton fx:id="p26si" layoutX="361.0" layoutY="665.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p26" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p25si" layoutX="361.0" layoutY="644.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p25" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p24si" layoutX="361.0" layoutY="622.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p24" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p23si" layoutX="361.0" layoutY="600.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" selected="true" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="p23" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="p17no" layoutX="400.0" layoutY="465.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p17" />
+      <RadioButton fx:id="p16no" layoutX="400.0" layoutY="440.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p16" />
+      <RadioButton fx:id="p18no" layoutX="400.0" layoutY="489.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p18" />
+      <RadioButton fx:id="p21no" layoutX="400.0" layoutY="556.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p21" />
+      <RadioButton fx:id="p22no" layoutX="400.0" layoutY="578.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p22" />
+      <RadioButton fx:id="p25no" layoutX="400.0" layoutY="644.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p25" />
+      <RadioButton fx:id="p19no" layoutX="400.0" layoutY="511.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p19" />
+      <RadioButton fx:id="p20no" layoutX="400.0" layoutY="534.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p20" />
+      <RadioButton fx:id="p26no" layoutX="400.0" layoutY="665.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p26" />
+      <RadioButton fx:id="p24no" layoutX="400.0" layoutY="622.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p24" />
+      <RadioButton fx:id="p23no" layoutX="400.0" layoutY="600.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" textFill="WHITE" toggleGroup="$p23" />
+      <Button fx:id="continuar" layoutX="521.0" layoutY="442.0" mnemonicParsing="false" onAction="#abrirAnadirDonacion" prefHeight="89.0" prefWidth="210.0" text="Siguiente" />
+      <TextField fx:id="codigoformulario" alignment="CENTER" layoutX="551.0" layoutY="253.0" promptText="CODIGO FORMULARIO" />
+      <TextField fx:id="codigodonante" alignment="CENTER" layoutX="551.0" layoutY="209.0" promptText="CODIGO DONANTE" />
+      <TextField fx:id="fecha" alignment="CENTER" layoutX="551.0" layoutY="297.0" promptText="FECHA: DD/MM/AAAA" />
+      <Button fx:id="borrar" layoutX="582.0" layoutY="365.0" mnemonicParsing="false" onAction="#borrar" prefHeight="48.0" prefWidth="88.0" text="BORRAR" />
+      <TableView fx:id="tabla" layoutX="651.0" layoutY="560.0" prefHeight="125.0" prefWidth="142.0">
+        <columns>
+          <TableColumn fx:id="codigo" prefWidth="141.0" text="ID FORMULARIO" />
+        </columns>
+      </TableView>
+      <Button fx:id="eliminar" layoutX="469.0" layoutY="607.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="48.0" prefWidth="123.0" text="ELIMINAR" />
    </children>
 </AnchorPane>

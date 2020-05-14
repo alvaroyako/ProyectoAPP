@@ -6,21 +6,22 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="782.0" style="-fx-background-color: #6FD7DE; -fx-border-color: black; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ControladoraDonaciones">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="782.0" style="-fx-background-color: #6FD7DE; -fx-border-color: black; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ControladoraDonaciones">
    <children>
-      <TableView layoutX="14.0" layoutY="275.0" prefHeight="265.0" prefWidth="754.0">
+      <TableView fx:id="tabla" layoutX="46.0" layoutY="227.0" prefHeight="265.0" prefWidth="691.0">
         <columns>
-          <TableColumn prefWidth="138.0" text="Código Donación" />
-          <TableColumn minWidth="1.0" prefWidth="165.0" text="Última Donación" />
-            <TableColumn prefWidth="126.0" text="Volumen" />
-            <TableColumn prefWidth="158.0" text="Tipo Sanguíneo" />
-            <TableColumn minWidth="0.0" prefWidth="166.0" text="Fecha" />
+          <TableColumn fx:id="codigo" prefWidth="138.0" text="Código Donación" />
+          <TableColumn fx:id="ultima" minWidth="1.0" prefWidth="138.0" text="Última Donación" />
+            <TableColumn fx:id="volumen" prefWidth="138.0" text="Volumen" />
+            <TableColumn fx:id="sangre" prefWidth="138.0" text="Tipo Sanguíneo" />
+            <TableColumn fx:id="fecha" minWidth="0.0" prefWidth="138.0" text="Fecha" />
         </columns>
       </TableView>
-      <Button fx:id="add" layoutX="14.0" layoutY="152.0" mnemonicParsing="false" onAction="#abrirFormulario" prefHeight="69.0" prefWidth="149.0" text="Nueva Donación" />
-      <Button fx:id="modificar" layoutX="213.0" layoutY="152.0" mnemonicParsing="false" onAction="#abrirModDonacion" prefHeight="69.0" prefWidth="149.0" text="Modificar Donación" />
-      <Button fx:id="buscar" layoutX="619.0" layoutY="152.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="149.0" text="Buscar por Código" />
-      <Button fx:id="eliminar" layoutX="421.0" layoutY="152.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="149.0" text="Borrar Donación" />
-      <TextField fx:id="busqueda" layoutX="619.0" layoutY="235.0" />
+      <Button fx:id="add" layoutX="14.0" layoutY="80.0" mnemonicParsing="false" onAction="#abrirFormulario" prefHeight="69.0" prefWidth="149.0" text="Nueva Donación" />
+      <Button fx:id="modificar" layoutX="214.0" layoutY="80.0" mnemonicParsing="false" onAction="#abrirModDonacion" prefHeight="69.0" prefWidth="149.0" text="Modificar Donación" />
+      <Button fx:id="buscar" layoutX="608.0" layoutY="80.0" mnemonicParsing="false" onAction="#Buscar" prefHeight="69.0" prefWidth="160.0" text="Buscar por Tipo Sanguineo" />
+      <Button fx:id="eliminar" layoutX="409.0" layoutY="80.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="69.0" prefWidth="149.0" text="Borrar Donación" />
+      <TextField fx:id="busqueda" layoutX="608.0" layoutY="174.0" prefHeight="25.0" prefWidth="160.0" />
+      <Button fx:id="actualizar" layoutX="668.0" layoutY="14.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="45.0" prefWidth="100.0" text="Actualizar Tabla" />
    </children>
 </AnchorPane>
