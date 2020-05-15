@@ -965,5 +965,34 @@ public class ConexionBBDD {
 		return listaconsultas;
 	}
 	
-	
+	public int LimiteDonaciones(int iddonante) throws SQLException{
+		Statement stm = conexion.createStatement();		
+		String selectsql = "SELECT COUNT (NUM_DONANTE) FROM " + usr +".REALIZAN WHERE NUM_DONANTE=?";
+		PreparedStatement pstmt = conexion.prepareStatement (selectsql);
+		pstmt.setInt(1, iddonante);
+		int ndonaciones=0;
+		try{
+			ResultSet resultado = pstmt.executeQuery();
+
+			int contador = 0;
+			while(resultado.next()){
+				contador++;
+
+				int id=resultado.getInt(1);
+				ndonaciones=ndonaciones+id;
+			}
+
+			if(contador==0)
+				System.out.println("no data found");
+
+		}catch(SQLException sqle){
+
+			int pos = sqle.getMessage().indexOf(":");
+			String codeErrorSQL = sqle.getMessage().substring(0,pos);
+
+			System.out.println(codeErrorSQL);
+		}
+		
+	return ndonaciones;
+	}
 }

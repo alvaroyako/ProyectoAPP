@@ -417,6 +417,16 @@ public class ControladoraFormulario {
 	
 	
 	public void abrirAnadirDonacion() throws SQLException {
+		ConexionBBDD con1=new ConexionBBDD();
+		String idsx=codigodonante.getText();
+		int idx=Integer.parseInt(idsx);
+		if(con1.LimiteDonaciones(idx)>2) {
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Imposible");
+			alert.setHeaderText("Limite superado");
+			alert.setContentText("Este donante ha superado el limite de donaciones por año");
+			alert.showAndWait();
+		}else {
 		
 		
 		if(p1no.isSelected()||p3no.isSelected()||p12si.isSelected()||p14si.isSelected()||p16si.isSelected()||p17si.isSelected()) {
@@ -847,7 +857,7 @@ public class ControladoraFormulario {
 		
 	}
 	
-	
+	}
 	
 
 	
