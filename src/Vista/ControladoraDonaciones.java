@@ -127,7 +127,7 @@ public class ControladoraDonaciones {
 						alert = new Alert(AlertType.INFORMATION);
 						alert.setTitle("OK!");
 						alert.setHeaderText("Borrado OK!");
-						alert.setContentText("¡Persona borrada con éxito!");
+						alert.setContentText("¡Donacion borrada con éxito!");
 						alert.showAndWait();
 
 						// Actualizo los datos de la tabla

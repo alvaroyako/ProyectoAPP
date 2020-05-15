@@ -390,20 +390,14 @@ public class ConexionBBDD {
 
 		// Preparo la sentencia SQL y la conexión para ejecutar sentencias SQL de tipo update
 		String deletesql = "DELETE " + usr +".DONACIONES WHERE CODIGO_DONACION= ?";
-		String deletesql2 = "DELETE " + usr +".REALIZAN WHERE CODIGO_DONACION= ?";
 		PreparedStatement pstmt = conexion.prepareStatement (deletesql);
-		pstmt.setInt(1, id);
-		PreparedStatement pstmt2 = conexion.prepareStatement (deletesql2);
 		pstmt.setInt(1, id);
 		//ejecuto la sentencia
 		try{
-			int resultado2 = pstmt2.executeUpdate();
 			int resultado = pstmt.executeUpdate();
 			
 			if(resultado != 1)
 				System.out.println("Error en el borrado " + resultado);
-			else if(resultado2 != 1)
-				System.out.println("Error en el borrado " + resultado2);
 			else
 				System.out.println("Donacion borrada con éxito!!!");
 
@@ -513,21 +507,15 @@ public class ConexionBBDD {
 
 		// Preparo la sentencia SQL y la conexión para ejecutar sentencias SQL de tipo update
 		String deletesql = "DELETE " + usr +".FORMULARIO WHERE CODIGO_FORMULARIO= ?";
-		String deletsql2= "DELETE " + usr +".RELLENAN WHERE CODIGO_FORMULARIO= ?";
 		PreparedStatement pstmt = conexion.prepareStatement (deletesql);
-		pstmt.setInt(1, id);
-		PreparedStatement pstmt2 = conexion.prepareStatement (deletsql2);
 		pstmt.setInt(1, id);
 
 		//ejecuto la sentencia
 		try{
-			int resultado2=pstmt2.executeUpdate();
 			int resultado = pstmt.executeUpdate();
 			
 			if(resultado != 1)
 				System.out.println("Error en el borrado " + resultado);
-			else if(resultado2 != 1)
-				System.out.println("Error en el borrado " + resultado2);
 			else
 				System.out.println("Formulario borrado con éxito!!!");
 
@@ -791,6 +779,191 @@ public class ConexionBBDD {
 
 	}
 	
+	public ObservableList<Consulta1> Consulta1() throws SQLException{
+		ObservableList<Consulta1> listaconsultas = FXCollections.observableArrayList();
+		Statement stm = conexion.createStatement();		
+		String selectsql = "SELECT COUNT (NUM_DONANTE) FROM " + usr +".DONANTES";
+		try{
+			ResultSet resultado = stm.executeQuery(selectsql);
+			int contador = 0;
+			while(resultado.next()){
+				contador++;
+				int n=resultado.getInt(1);
+
+				Consulta1 nueva = new Consulta1(n);
+				listaconsultas.add(nueva);
+			}
+
+			if(contador==0)
+				System.out.println("no data found");
+
+			
+			
+		}catch(SQLException sqle){
+
+			int pos = sqle.getMessage().indexOf(":");
+			String codeErrorSQL = sqle.getMessage().substring(0,pos);
+
+			System.out.println(codeErrorSQL);
+		}
+
+		return listaconsultas;
+	}
+	
+	public ObservableList<Consulta2> Consulta2() throws SQLException{
+		ObservableList<Consulta2> listaconsultas = FXCollections.observableArrayList();
+		Statement stm = conexion.createStatement();		
+		String selectsql = "SELECT COUNT (NUM_DONANTE) FROM " + usr +".DONANTES WHERE SEXO='H'";
+		try{
+			ResultSet resultado = stm.executeQuery(selectsql);
+			int contador = 0;
+			while(resultado.next()){
+				contador++;
+				int n=resultado.getInt(1);
+
+				Consulta2 nueva = new Consulta2(n);
+				listaconsultas.add(nueva);
+			}
+
+			if(contador==0)
+				System.out.println("no data found");
+
+			
+			
+		}catch(SQLException sqle){
+
+			int pos = sqle.getMessage().indexOf(":");
+			String codeErrorSQL = sqle.getMessage().substring(0,pos);
+
+			System.out.println(codeErrorSQL);
+		}
+
+		return listaconsultas;
+	}
+	
+	public ObservableList<Consulta3> Consulta3() throws SQLException{
+		ObservableList<Consulta3> listaconsultas = FXCollections.observableArrayList();
+		Statement stm = conexion.createStatement();		
+		String selectsql = "SELECT COUNT (NUM_DONANTE) FROM " + usr +".DONANTES WHERE SEXO='M'";
+		try{
+			ResultSet resultado = stm.executeQuery(selectsql);
+			int contador = 0;
+			while(resultado.next()){
+				contador++;
+				int n=resultado.getInt(1);
+
+				Consulta3 nueva = new Consulta3(n);
+				listaconsultas.add(nueva);
+			}
+
+			if(contador==0)
+				System.out.println("no data found");
+
+			
+			
+		}catch(SQLException sqle){
+
+			int pos = sqle.getMessage().indexOf(":");
+			String codeErrorSQL = sqle.getMessage().substring(0,pos);
+
+			System.out.println(codeErrorSQL);
+		}
+
+		return listaconsultas;
+	}
+	
+	public ObservableList<Consulta4> Consulta4() throws SQLException{
+		ObservableList<Consulta4> listaconsultas = FXCollections.observableArrayList();
+		Statement stm = conexion.createStatement();		
+		String selectsql = "SELECT COUNT (NUM_DONANTE) FROM " + usr +".DONANTES WHERE POBLACION='VALDEMORO'";
+		try{
+			ResultSet resultado = stm.executeQuery(selectsql);
+			int contador = 0;
+			while(resultado.next()){
+				contador++;
+				int n=resultado.getInt(1);
+
+				Consulta4 nueva = new Consulta4(n);
+				listaconsultas.add(nueva);
+			}
+
+			if(contador==0)
+				System.out.println("no data found");
+
+			
+			
+		}catch(SQLException sqle){
+
+			int pos = sqle.getMessage().indexOf(":");
+			String codeErrorSQL = sqle.getMessage().substring(0,pos);
+
+			System.out.println(codeErrorSQL);
+		}
+
+		return listaconsultas;
+	}
+	
+	public ObservableList<Consulta5> Consulta5() throws SQLException{
+		ObservableList<Consulta5> listaconsultas = FXCollections.observableArrayList();
+		Statement stm = conexion.createStatement();		
+		String selectsql = "SELECT COUNT (NUM_DONANTE) FROM " + usr +".DONANTES WHERE SITUACION_COMO_DONANTE='APTO'";
+		try{
+			ResultSet resultado = stm.executeQuery(selectsql);
+			int contador = 0;
+			while(resultado.next()){
+				contador++;
+				int n=resultado.getInt(1);
+
+				Consulta5 nueva = new Consulta5(n);
+				listaconsultas.add(nueva);
+			}
+
+			if(contador==0)
+				System.out.println("no data found");
+
+			
+			
+		}catch(SQLException sqle){
+
+			int pos = sqle.getMessage().indexOf(":");
+			String codeErrorSQL = sqle.getMessage().substring(0,pos);
+
+			System.out.println(codeErrorSQL);
+		}
+
+		return listaconsultas;
+	}
+	
+	public ObservableList<Consulta6> Consulta6() throws SQLException{
+		ObservableList<Consulta6> listaconsultas = FXCollections.observableArrayList();
+		Statement stm = conexion.createStatement();		
+		String selectsql = "SELECT COUNT (NUM_DONANTE) FROM " + usr +".DONANTES WHERE PAIS_NACIMIENTO='ESPAÑA'";
+		try{
+			ResultSet resultado = stm.executeQuery(selectsql);
+			int contador = 0;
+			while(resultado.next()){
+				contador++;
+				int n=resultado.getInt(1);
+
+				Consulta6 nueva = new Consulta6(n);
+				listaconsultas.add(nueva);
+			}
+
+			if(contador==0)
+				System.out.println("no data found");
+
+			
+			
+		}catch(SQLException sqle){
+
+			int pos = sqle.getMessage().indexOf(":");
+			String codeErrorSQL = sqle.getMessage().substring(0,pos);
+
+			System.out.println(codeErrorSQL);
+		}
+
+		return listaconsultas;
+	}
 	
 	
 }
